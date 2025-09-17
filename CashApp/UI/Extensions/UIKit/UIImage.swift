@@ -15,6 +15,7 @@ extension UIImage {
         case onboard2Image
         case onboard3Image
         case premiumBackgroundImage
+        case closeIc
     }
     
     static func asset(_ name: Asset) -> UIImage {

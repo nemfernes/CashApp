@@ -19,6 +19,7 @@ final class CommonPremiumViewController<Router: CommonPremiumRouter>: ViewContro
 	private var isMain = true
 	private let monthProduct: AppProduct
 	private let yearProduct: AppProduct
+    private var selectedProduct: AppProduct
 	
 	// MARK: - Life cycle
 	init(delegate: PremiumControllerDelegate?, adaptyPlacement: AdaptyPlacement) {
@@ -26,6 +27,7 @@ final class CommonPremiumViewController<Router: CommonPremiumRouter>: ViewContro
 		self.adaptyPlacement = adaptyPlacement
         monthProduct = .trialMonthSub
         yearProduct = .yearSub
+        selectedProduct = .trialMonthSub
 		super.init()
 	}
 
@@ -38,7 +40,7 @@ final class CommonPremiumViewController<Router: CommonPremiumRouter>: ViewContro
 
 	// MARK: - Private methods
 	private func setupView() {
-	//	mainView.setSelectedProduct(isMain: isMain)
+        mainView.setupUI(product: .month)
 	}
 
 	private func setupActions() {
@@ -52,34 +54,32 @@ final class CommonPremiumViewController<Router: CommonPremiumRouter>: ViewContro
 			purchaseProduct()
 		}
 		
-		mainView.mainProductAction = { [weak self] in
+        mainView.productAction = { [weak self] product in
 			guard let self else { return }
-			isMain = true
-			//mainView.setSelectedProduct(isMain: isMain)
-		}
-
-		mainView.subProductAction = { [weak self] in
-			guard let self else { return }
-			isMain = false
-			//mainView.setSelectedProduct(isMain: isMain)
+            switch product {
+            case .month:
+                self.selectedProduct = .trialMonthSub
+            case .year:
+                self.selectedProduct = .yearSub
+            }
 		}
 	}
 	
 	private func fetchPrices() {
         SubscriptionService.shared.retrieveProductInfo(appProduct: yearProduct, completion: { [weak self] subscription in
 			guard let self else { return }
-			//self.mainView.setPrice(product: subscription)
+            self.mainView.setPrice(product: .year, sub: subscription)
 		})
 		
         SubscriptionService.shared.retrieveProductInfo(appProduct: monthProduct, completion: { [weak self] subscription in
 			guard let self else { return }
-			//self.mainView.setPrice(product: subscription)
+            self.mainView.setPrice(product: .month, sub: subscription)
 		})
 	}
 	
-    private func purchaseProduct(product: AppProduct) {
+    private func purchaseProduct() {
 		addLoadingView()
-		SubscriptionService.shared.purchaseProduct(product: product, placement: adaptyPlacement, completion: { [weak self] result in
+        SubscriptionService.shared.purchaseProduct(product: selectedProduct, placement: adaptyPlacement, completion: { [weak self] result in
 			guard let self else { return }
 			removeLoadingView()
 			switch result {
@@ -90,8 +90,7 @@ final class CommonPremiumViewController<Router: CommonPremiumRouter>: ViewContro
 				case .purchaseCancelled:
 					break
 				default:
-                    break
-					//router.openErrorAlert(completion: nil)
+                    router.openErrorAlert(completion: nil)
 				}
 			}
 		})
