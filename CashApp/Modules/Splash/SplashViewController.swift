@@ -20,7 +20,7 @@ final class SplashViewController<Router: SplashRouter>: ViewController<SplashVie
 
 		DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             if UserDefaults.showMain {
-			//	self.router.toPrescreen()
+				self.router.toPrescreen()
 			} else {
 				self.router.toOnboarding()
 			}

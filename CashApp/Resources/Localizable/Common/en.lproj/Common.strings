@@ -16,3 +16,32 @@
 "LS.Common.Strings.bestPrice" = "Best price";
 "LS.Common.Strings.slashYear" = " %@/year";
 "LS.Common.Strings.continueFree" = "Continue for FREE";
+
+"LS.Common.Strings.savingsTracker" = "Savings Tracker";
+"LS.Common.Strings.beginBuilding" = "Begin building your savings!";
+"LS.Common.Strings.setUr" = "Set your first goal to get started.";
+"LS.Common.Strings.setUrButton" = "Set Your First Goal";
+"LS.Common.Strings.newGoal" = "New Goal";
+"LS.Common.Strings.addEmoji" = "Add Emoji";
+"LS.Common.Strings.goalName" = "Goal Name";
+"LS.Common.Strings.vacatin" = "Vacation";
+"LS.Common.Strings.goalAmount" = "Goal Amount";
+"LS.Common.Strings.currency" = "Currency";
+"LS.Common.Strings.dedline" = "Deadline";
+
+"LS.Common.Strings.save" = "Save";
+"LS.Common.Strings.smilys" = "Smilys";
+"LS.Common.Strings.people" = "People";
+"LS.Common.Strings.animals" = "Animals & Nature";
+"LS.Common.Strings.food" = "Food & Drink";
+"LS.Common.Strings.travel" = "Travel & Places";
+"LS.Common.Strings.object" = "Objects";
+"LS.Common.Strings.symbols" = "Symbols";
+"LS.Common.Strings.flags" = "Flags";
+"LS.Common.Strings.doU" = "Do you want to exit?";
+"LS.Common.Strings.theInformation" = "The information will be lost and not saved.";
+"LS.Common.Strings.exit" = "Exit";
+"LS.Common.Strings.cancel" = "Cancel";
+"LS.Common.Strings.december" = "December 30, 2025";
+"LS.Common.Strings.warning" = "Warning";
+"LS.Common.Strings.notAll" = "Not all fields fill";

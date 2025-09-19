@@ -9,7 +9,7 @@ import UIKit
 
 public class OnboardingRouter: Router {
 	func toPrescreen() {
-//		openPrescreen(transition: RootTransition(window: AppDelegate.window!), router: PrescreenRouter.self)
+		openPrescreen(transition: RootTransition(window: AppDelegate.window!), router: PrescreenRouter.self)
 	}
 	
 	func toPremium(delegate: PremiumControllerDelegate, placement: AdaptyPlacement, containerView: UIView) {
@@ -19,4 +19,4 @@ public class OnboardingRouter: Router {
 }
 
 extension OnboardingRouter: CustomPremiumRoute { }
-//extension OnboardingRouter: PrescreenRoute { }
+extension OnboardingRouter: PrescreenRoute { }

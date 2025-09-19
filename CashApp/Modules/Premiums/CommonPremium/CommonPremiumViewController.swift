@@ -94,6 +94,5 @@ final class CommonPremiumViewController<Router: CommonPremiumRouter>: ViewContro
 				}
 			}
 		})
-		
 	}
 }

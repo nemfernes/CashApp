@@ -35,6 +35,14 @@ open class BaseViewController: UIViewController {
 			name: .premiumDidChange,
 			object: nil
 		)
+        NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(handlePremiumChange),
+                    name: .premiumDidChange,
+                    object: nil
+                )
+                
+                setupHideKeyboardGesture()
 				
 	}
 	@objc private func handlePremiumChange() {
@@ -70,6 +78,16 @@ open class BaseViewController: UIViewController {
 	open func setBackground() {
         view.backgroundColor = .color151718
 	}
+    
+    private func setupHideKeyboardGesture() {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            tap.cancelsTouchesInView = false  
+            view.addGestureRecognizer(tap)
+        }
+
+        @objc private func dismissKeyboard() {
+            view.endEditing(true)
+        }
 	open func addLoadingView(with animation: AnimationEnum = .indicator) {
 		removeLoadingView()
 		loadingView = UIView()

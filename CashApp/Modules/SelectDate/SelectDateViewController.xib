@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectDateViewController" customModule="CashApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="SelectDateView" customModule="CashApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTB-sZ-m96">
+                    <rect key="frame" x="0.0" y="392" width="393" height="460"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sheetIc" translatesAutoresizingMaskIntoConstraints="NO" id="3Ra-Od-z3U">
+                            <rect key="frame" x="178.66666666666666" y="12" width="36" height="4"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="Gov-5S-RaH"/>
+                                <constraint firstAttribute="height" constant="4" id="YKn-0H-q3E"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLJ-eD-hD8">
+                            <rect key="frame" x="176" y="36" width="41.333333333333343" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="giH-Dl-KHm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-be-vqe">
+                            <rect key="frame" x="20" y="60" width="353" height="302"/>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gL-ov-bII">
+                            <rect key="frame" x="20" y="362" width="353" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="lxM-zm-5d5"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="jlO-RY-oWX"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="0gL-ov-bII" firstAttribute="leading" secondItem="jlO-RY-oWX" secondAttribute="leading" constant="20" id="052-3i-maF"/>
+                        <constraint firstItem="3Ra-Od-z3U" firstAttribute="centerX" secondItem="jTB-sZ-m96" secondAttribute="centerX" id="0rB-4e-Ds5"/>
+                        <constraint firstItem="BLJ-eD-hD8" firstAttribute="centerX" secondItem="jTB-sZ-m96" secondAttribute="centerX" id="1Rb-vy-QPk"/>
+                        <constraint firstAttribute="height" constant="460" id="A6y-PO-8FK"/>
+                        <constraint firstAttribute="trailing" secondItem="DSf-be-vqe" secondAttribute="trailing" constant="20" id="DO4-Hc-RzH"/>
+                        <constraint firstItem="3Ra-Od-z3U" firstAttribute="top" secondItem="jTB-sZ-m96" secondAttribute="top" constant="12" id="Fmf-GJ-og2"/>
+                        <constraint firstItem="BLJ-eD-hD8" firstAttribute="top" secondItem="3Ra-Od-z3U" secondAttribute="bottom" constant="20" id="O93-w9-f4u"/>
+                        <constraint firstItem="0gL-ov-bII" firstAttribute="top" secondItem="DSf-be-vqe" secondAttribute="bottom" id="T0j-ri-v28"/>
+                        <constraint firstItem="DSf-be-vqe" firstAttribute="leading" secondItem="jTB-sZ-m96" secondAttribute="leading" constant="20" id="Zka-gx-nbi"/>
+                        <constraint firstItem="jlO-RY-oWX" firstAttribute="bottom" secondItem="0gL-ov-bII" secondAttribute="bottom" constant="8" id="bHa-Ma-qeb"/>
+                        <constraint firstItem="DSf-be-vqe" firstAttribute="top" secondItem="BLJ-eD-hD8" secondAttribute="bottom" id="cFT-FR-esU"/>
+                        <constraint firstItem="jlO-RY-oWX" firstAttribute="trailing" secondItem="0gL-ov-bII" secondAttribute="trailing" constant="20" id="mfx-7R-6hh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jTB-sZ-m96" secondAttribute="bottom" id="HfX-NE-Xpg"/>
+                <constraint firstItem="jTB-sZ-m96" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Huk-D3-R0C"/>
+                <constraint firstItem="jTB-sZ-m96" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KTA-ls-LBv"/>
+            </constraints>
+            <connections>
+                <outlet property="containerView" destination="jTB-sZ-m96" id="CYb-Uk-I0a"/>
+                <outlet property="datePicker" destination="DSf-be-vqe" id="Saw-tp-IQU"/>
+                <outlet property="saveButton" destination="0gL-ov-bII" id="HXm-56-nhb"/>
+                <outlet property="titleLabel" destination="BLJ-eD-hD8" id="BHv-In-8nd"/>
+            </connections>
+            <point key="canvasLocation" x="-54" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sheetIc" width="36" height="4"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
