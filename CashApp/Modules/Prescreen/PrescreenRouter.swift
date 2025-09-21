@@ -12,8 +12,13 @@ public class PrescreenRouter: Router {
     func toEditCreate() {
         openEditCreate(transition: ModalTransition(fromViewController: viewController, transitionStyle: .crossDissolve, presentationStyle: .fullScreen), router: EditCreateRouter.self)
     }
+    
+    func toDetail(goal: Goal) {
+        openDetailGoal(transition: ModalTransition(fromViewController: viewController, transitionStyle: .crossDissolve, presentationStyle: .fullScreen), router: DetailGoalRouter.self, goal: goal)
+    }
 }
 
 
 
 extension PrescreenRouter: EditCreateRoute { }
+extension PrescreenRouter: DetailGoalRoute {}

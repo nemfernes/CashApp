@@ -35,6 +35,21 @@
 		0A4F1AD82E78AA75007CD304 /* Urbanist-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A4F1AB42E78AA75007CD304 /* Urbanist-ExtraLightItalic.ttf */; };
 		0A4F1AD92E78AA75007CD304 /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A4F1ABB2E78AA75007CD304 /* Urbanist-SemiBold.ttf */; };
 		0A4F1ADA2E78AA75007CD304 /* Urbanist-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A4F1ABE2E78AA75007CD304 /* Urbanist-ThinItalic.ttf */; };
+		0A506E4E2E7DAA5D005111BB /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A506E482E7DAA5D005111BB /* GoalCollectionViewCell.swift */; };
+		0A506E502E7DAA5D005111BB /* GoalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A506E492E7DAA5D005111BB /* GoalCollectionViewCell.xib */; };
+		0A506E522E7DB3BB005111BB /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A506E512E7DB3BB005111BB /* CircleProgressView.swift */; };
+		0A506E542E7EC236005111BB /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A506E532E7EC236005111BB /* SegmentedControlView.swift */; };
+		0A506E572E7EC24E005111BB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A506E562E7EC24E005111BB /* SnapKit */; };
+		0A506E5E2E7EC3B3005111BB /* DetailGoalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A506E5A2E7EC3B3005111BB /* DetailGoalRouter.swift */; };
+		0A506E5F2E7EC3B3005111BB /* DetailGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A506E5B2E7EC3B3005111BB /* DetailGoalView.swift */; };
+		0A506E602E7EC3B3005111BB /* DetailGoalRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A506E592E7EC3B3005111BB /* DetailGoalRoute.swift */; };
+		0A506E612E7EC3B3005111BB /* DetailGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A506E5C2E7EC3B3005111BB /* DetailGoalViewController.swift */; };
+		0A506E622E7EC3B3005111BB /* DetailGoalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A506E5D2E7EC3B3005111BB /* DetailGoalViewController.xib */; };
+		0A67ECA12E8076980047E03B /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67EC9F2E8076980047E03B /* AddTransactionViewController.swift */; };
+		0A67ECA22E8076980047E03B /* AddTransactionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67EC9D2E8076980047E03B /* AddTransactionRouter.swift */; };
+		0A67ECA32E8076980047E03B /* AddTransactionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67EC9C2E8076980047E03B /* AddTransactionRoute.swift */; };
+		0A67ECA42E8076980047E03B /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67EC9E2E8076980047E03B /* AddTransactionView.swift */; };
+		0A67ECA52E8076980047E03B /* AddTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67ECA02E8076980047E03B /* AddTransactionViewController.xib */; };
 		0AC341732E74C037004AD933 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC341722E74C037004AD933 /* Lottie */; };
 		0AC341762E74C04D004AD933 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC341752E74C04D004AD933 /* Adapty */; };
 		0AC341792E74C05D004AD933 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC341782E74C05D004AD933 /* SwiftyStoreKit */; };
@@ -215,6 +230,20 @@
 		0A4F1AC12E78AA75007CD304 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		0A4F1AC22E78AA75007CD304 /* Urbanist-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		0A4F1AC32E78AA75007CD304 /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		0A506E482E7DAA5D005111BB /* GoalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A506E492E7DAA5D005111BB /* GoalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalCollectionViewCell.xib; sourceTree = "<group>"; };
+		0A506E512E7DB3BB005111BB /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		0A506E532E7EC236005111BB /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
+		0A506E592E7EC3B3005111BB /* DetailGoalRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoalRoute.swift; sourceTree = "<group>"; };
+		0A506E5A2E7EC3B3005111BB /* DetailGoalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoalRouter.swift; sourceTree = "<group>"; };
+		0A506E5B2E7EC3B3005111BB /* DetailGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoalView.swift; sourceTree = "<group>"; };
+		0A506E5C2E7EC3B3005111BB /* DetailGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoalViewController.swift; sourceTree = "<group>"; };
+		0A506E5D2E7EC3B3005111BB /* DetailGoalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGoalViewController.xib; sourceTree = "<group>"; };
+		0A67EC9C2E8076980047E03B /* AddTransactionRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionRoute.swift; sourceTree = "<group>"; };
+		0A67EC9D2E8076980047E03B /* AddTransactionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionRouter.swift; sourceTree = "<group>"; };
+		0A67EC9E2E8076980047E03B /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		0A67EC9F2E8076980047E03B /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		0A67ECA02E8076980047E03B /* AddTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTransactionViewController.xib; sourceTree = "<group>"; };
 		0AC3417E2E74C18F004AD933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACB1E642E7C7F76002A4FCF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0ACB1E672E7C7FAE002A4FCF /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -397,6 +426,7 @@
 				0AC341792E74C05D004AD933 /* SwiftyStoreKit in Frameworks */,
 				0AC341732E74C037004AD933 /* Lottie in Frameworks */,
 				0AC341762E74C04D004AD933 /* Adapty in Frameworks */,
+				0A506E572E7EC24E005111BB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +487,39 @@
 			path = Urbanist;
 			sourceTree = "<group>";
 		};
+		0A506E4C2E7DAA5D005111BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0A506E482E7DAA5D005111BB /* GoalCollectionViewCell.swift */,
+				0A506E492E7DAA5D005111BB /* GoalCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0A506E582E7EC35D005111BB /* DetailGoal */ = {
+			isa = PBXGroup;
+			children = (
+				0A506E592E7EC3B3005111BB /* DetailGoalRoute.swift */,
+				0A506E5A2E7EC3B3005111BB /* DetailGoalRouter.swift */,
+				0A506E5B2E7EC3B3005111BB /* DetailGoalView.swift */,
+				0A506E5C2E7EC3B3005111BB /* DetailGoalViewController.swift */,
+				0A506E5D2E7EC3B3005111BB /* DetailGoalViewController.xib */,
+			);
+			path = DetailGoal;
+			sourceTree = "<group>";
+		};
+		0A67EC9B2E8076790047E03B /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				0A67EC9C2E8076980047E03B /* AddTransactionRoute.swift */,
+				0A67EC9D2E8076980047E03B /* AddTransactionRouter.swift */,
+				0A67EC9E2E8076980047E03B /* AddTransactionView.swift */,
+				0A67EC9F2E8076980047E03B /* AddTransactionViewController.swift */,
+				0A67ECA02E8076980047E03B /* AddTransactionViewController.xib */,
+			);
+			path = AddTransaction;
+			sourceTree = "<group>";
+		};
 		0AC341AE2E760C4B004AD933 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +563,7 @@
 		0AE0D38C2E7AC18400623631 /* Prescreen */ = {
 			isa = PBXGroup;
 			children = (
+				0A506E4C2E7DAA5D005111BB /* Cell */,
 				0AE0D38D2E7AC19C00623631 /* PrescreenRoute.swift */,
 				0AE0D38E2E7AC19C00623631 /* PrescreenRouter.swift */,
 				0AE0D38F2E7AC19C00623631 /* PrescreenView.swift */,
@@ -805,6 +869,8 @@
 			children = (
 				494680552E3753500054FFB5 /* AnimationView.swift */,
 				0AE0D3972E7AE73D00623631 /* CenterTextButton.swift */,
+				0A506E512E7DB3BB005111BB /* CircleProgressView.swift */,
+				0A506E532E7EC236005111BB /* SegmentedControlView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -836,6 +902,8 @@
 		494680B82E3794DD0054FFB5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0A67EC9B2E8076790047E03B /* AddTransaction */,
+				0A506E582E7EC35D005111BB /* DetailGoal */,
 				0ACB1E792E7C8D4A002A4FCF /* SelectDate */,
 				0ACB1E692E7C8228002A4FCF /* SelectCurrency */,
 				0AE0D3AD2E7B273900623631 /* SelectEmoji */,
@@ -935,6 +1003,7 @@
 				0AC341752E74C04D004AD933 /* Adapty */,
 				0AC341782E74C05D004AD933 /* SwiftyStoreKit */,
 				0ACB1E752E7C89DF002A4FCF /* RealmSwift */,
+				0A506E562E7EC24E005111BB /* SnapKit */,
 			);
 			productName = "AI Logo Generator";
 			productReference = 49467FAB2E3752C10054FFB5 /* CashApp.app */;
@@ -1008,6 +1077,7 @@
 				0AC341742E74C04D004AD933 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
 				0AC341772E74C05D004AD933 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
 				0ACB1E742E7C89DF002A4FCF /* XCRemoteSwiftPackageReference "realm-swift" */,
+				0A506E552E7EC24E005111BB /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 49467FAC2E3752C10054FFB5 /* Products */;
@@ -1039,6 +1109,7 @@
 				0A4F1ACB2E78AA75007CD304 /* Urbanist-Black.ttf in Resources */,
 				0A4F1ACC2E78AA75007CD304 /* Urbanist-Thin.ttf in Resources */,
 				0A4F1ACD2E78AA75007CD304 /* Urbanist-ExtraBold.ttf in Resources */,
+				0A506E502E7DAA5D005111BB /* GoalCollectionViewCell.xib in Resources */,
 				0A4F1ACE2E78AA75007CD304 /* Urbanist-Regular.ttf in Resources */,
 				0AE0D3AC2E7B24D600623631 /* AddCollectionViewCell.xib in Resources */,
 				0AE0D3A82E7B1E6200623631 /* CategoryCollectionViewCell.xib in Resources */,
@@ -1049,6 +1120,7 @@
 				0A4F1AD32E78AA75007CD304 /* Urbanist-BlackItalic.ttf in Resources */,
 				0AE0D3962E7AC19C00623631 /* PrescreenViewController.xib in Resources */,
 				0A4F1AD42E78AA75007CD304 /* Urbanist-Italic.ttf in Resources */,
+				0A506E622E7EC3B3005111BB /* DetailGoalViewController.xib in Resources */,
 				0A4F1AD52E78AA75007CD304 /* Urbanist-MediumItalic.ttf in Resources */,
 				0A4F1AD62E78AA75007CD304 /* Urbanist-SemiBoldItalic.ttf in Resources */,
 				0AE0D3B72E7B27C700623631 /* SelectEmojiViewController.xib in Resources */,
@@ -1056,6 +1128,7 @@
 				0A4F1AD82E78AA75007CD304 /* Urbanist-ExtraLightItalic.ttf in Resources */,
 				0A4F1AD92E78AA75007CD304 /* Urbanist-SemiBold.ttf in Resources */,
 				0A4F1ADA2E78AA75007CD304 /* Urbanist-ThinItalic.ttf in Resources */,
+				0A67ECA52E8076980047E03B /* AddTransactionViewController.xib in Resources */,
 				0AE0D3C02E7B42D600623631 /* EmojiCollectionViewCell.xib in Resources */,
 				494680E62E3797690054FFB5 /* OnboardingViewController.xib in Resources */,
 				0ACB1E7F2E7C8D60002A4FCF /* SelectDateViewController.xib in Resources */,
@@ -1114,6 +1187,7 @@
 				4946807E2E3753500054FFB5 /* UILabel+Setup.swift in Sources */,
 				4946807F2E3753500054FFB5 /* UIFont+Constants.swift in Sources */,
 				494681472E38CBCD0054FFB5 /* SubscriptionService.swift in Sources */,
+				0A506E542E7EC236005111BB /* SegmentedControlView.swift in Sources */,
 				494680802E3753500054FFB5 /* Localizable.swift in Sources */,
 				494680812E3753500054FFB5 /* UICollectionView+Register.swift in Sources */,
 				494680822E3753500054FFB5 /* ModalTransition.swift in Sources */,
@@ -1131,8 +1205,13 @@
 				494680892E3753500054FFB5 /* String+FormatColored.swift in Sources */,
 				0A4F1AA82E789A50007CD304 /* UIColor.swift in Sources */,
 				0A4F1AA92E789A50007CD304 /* UIImage.swift in Sources */,
+				0A506E4E2E7DAA5D005111BB /* GoalCollectionViewCell.swift in Sources */,
 				4946808A2E3753500054FFB5 /* DarkerPresentationController.swift in Sources */,
 				4946808B2E3753500054FFB5 /* RootTransition.swift in Sources */,
+				0A67ECA12E8076980047E03B /* AddTransactionViewController.swift in Sources */,
+				0A67ECA22E8076980047E03B /* AddTransactionRouter.swift in Sources */,
+				0A67ECA32E8076980047E03B /* AddTransactionRoute.swift in Sources */,
+				0A67ECA42E8076980047E03B /* AddTransactionView.swift in Sources */,
 				0A4F1AAC2E78A31D007CD304 /* UserDefaults.swift in Sources */,
 				0ACB1E802E7C8D60002A4FCF /* SelectDateRoute.swift in Sources */,
 				0ACB1E812E7C8D60002A4FCF /* SelectDateViewController.swift in Sources */,
@@ -1159,6 +1238,10 @@
 				494680962E3753500054FFB5 /* UIButton+Setup.swift in Sources */,
 				0AE0D39F2E7AF51500623631 /* EditCreateRoute.swift in Sources */,
 				0AE0D3A02E7AF51500623631 /* EditCreateView.swift in Sources */,
+				0A506E5E2E7EC3B3005111BB /* DetailGoalRouter.swift in Sources */,
+				0A506E5F2E7EC3B3005111BB /* DetailGoalView.swift in Sources */,
+				0A506E602E7EC3B3005111BB /* DetailGoalRoute.swift in Sources */,
+				0A506E612E7EC3B3005111BB /* DetailGoalViewController.swift in Sources */,
 				0AE0D3A12E7AF51500623631 /* EditCreateViewController.swift in Sources */,
 				0AE0D3A22E7AF51500623631 /* EditCreateRouter.swift in Sources */,
 				494680972E3753500054FFB5 /* BlurBottomTransition.swift in Sources */,
@@ -1166,6 +1249,7 @@
 				0AE0D3C32E7B42D600623631 /* EmojiCollectionViewCell.swift in Sources */,
 				494680992E3753500054FFB5 /* UINavigationController.swift in Sources */,
 				4946809B2E3753500054FFB5 /* Vibration.swift in Sources */,
+				0A506E522E7DB3BB005111BB /* CircleProgressView.swift in Sources */,
 				494681492E38CCB20054FFB5 /* CustomPremiumRoute.swift in Sources */,
 				4946809C2E3753500054FFB5 /* Bundle+Constants.swift in Sources */,
 				4946809D2E3753500054FFB5 /* Transition.swift in Sources */,
@@ -1467,6 +1551,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0A506E552E7EC24E005111BB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 		0AC341712E74C037004AD933 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -1502,6 +1594,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A506E562E7EC24E005111BB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A506E552E7EC24E005111BB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		0AC341722E74C037004AD933 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0AC341712E74C037004AD933 /* XCRemoteSwiftPackageReference "lottie-ios" */;

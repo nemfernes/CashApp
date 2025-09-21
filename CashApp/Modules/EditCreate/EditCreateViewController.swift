@@ -12,13 +12,16 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
     // MARK: - Properties
     private var currentGoal: Goal
     private var selectedEmoji: String?
+    private var isNew: Bool
     private var emojis = ["🚗","🏖️","🎉","💻","💍"]
     // MARK: - Life cycle
     
     init(goal: Goal?) {
         if let goal {
+            self.isNew = false
             self.currentGoal = goal
         } else {
+            self.isNew = true
             self.currentGoal = Goal()
         }
         super.init()
@@ -85,7 +88,7 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
         let amount = mainView.amountTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let currency = mainView.currencyValueLabel.text ?? ""
         let date = mainView.dateValueLabel.text ?? ""
-
+        
         if name.isEmpty {
             self.router.openWarningAlert(title: LS.Common.Strings.warning.localized , text: LS.Common.Strings.notAll.localized )
             return
@@ -110,18 +113,29 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
             self.router.openWarningAlert(title: LS.Common.Strings.warning.localized , text: LS.Common.Strings.notAll.localized )
             return
         }
-        
-        DatabaseManager.shared.update(currentGoal) {
-            self.currentGoal.name = name
-            self.currentGoal.amount = amount
-            self.currentGoal.currency = currency
-            self.currentGoal.date = date
-            self.currentGoal.emoji = self.selectedEmoji ?? ""
+        if isNew {
+            currentGoal.name = name
+            currentGoal.amount = Int(amount) ?? 0
+            currentGoal.currency = currency
+            currentGoal.date = date
+            currentGoal.emoji = self.selectedEmoji ?? ""
+            
+            DatabaseManager.shared.add(currentGoal)
+        } else {
+            DatabaseManager.shared.update(currentGoal) {
+                self.currentGoal.name = name
+                self.currentGoal.amount = Int(amount) ?? 0
+                self.currentGoal.currency = currency
+                self.currentGoal.date = date
+                self.currentGoal.emoji = self.selectedEmoji ?? ""
+            }
         }
         
+        print(DatabaseManager.shared
+            .getAll(Goal.self))
         router.close()
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return emojis.count + 1

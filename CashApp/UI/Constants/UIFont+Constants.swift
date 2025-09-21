@@ -42,6 +42,7 @@ private extension UIFont {
 public extension UIFont {
     
     // MARK: - Urbanist SemiBold
+    static var urbanistSemiBold44: UIFont! { .getFont(size: 44, family: .urbanist, style: .semiBold) }
     static var urbanistSemiBold36: UIFont! { .getFont(size: 36, family: .urbanist, style: .semiBold) }
     static var urbanistSemiBold28: UIFont! { .getFont(size: 28, family: .urbanist, style: .semiBold) }
     static var urbanistSemiBold24: UIFont! { .getFont(size: 24, family: .urbanist, style: .semiBold) }

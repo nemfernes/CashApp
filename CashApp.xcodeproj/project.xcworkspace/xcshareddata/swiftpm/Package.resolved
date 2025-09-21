@@ -1,5 +1,5 @@
 {
-  "originHash" : "2aff3a5d5dda4654222b29ce165c6ea1d5c758d4c00796842f00ff42bbae2d18",
+  "originHash" : "9b802be148ac6c60dc56886cab2448105a9a149b9357bf42b9a75162f36e60bf",
   "pins" : [
     {
       "identity" : "adaptysdk-ios",
@@ -35,6 +35,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "5fcba6408c99eb3596bf5ae148bfc1a33b5adebd"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
       }
     },
     {

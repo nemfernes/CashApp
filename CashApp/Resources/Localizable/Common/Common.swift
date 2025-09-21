@@ -58,6 +58,23 @@ public extension LS.Common {
         case december = "LS.Common.Strings.december"
         case warning = "LS.Common.Strings.warning"
         case notAll = "LS.Common.Strings.notAll"
+        case goal = "LS.Common.Strings.goal"
+        case history = "LS.Common.Strings.history"
+        case withdraw = "LS.Common.Strings.withdraw"
+        case addSavings = "LS.Common.Strings.addSavings"
+        case accumulated = "LS.Common.Strings.accumulated"
+        case remaining = "LS.Common.Strings.remaining"
+        case perMonth = "LS.Common.Strings.perMonth"
+        case ofTheGoal = "LS.Common.Strings.ofTheGoal"
+        case savingPlan = "LS.Common.Strings.savingPlan"
+        case perDay = "LS.Common.Strings.perDay"
+        case perWeek = "LS.Common.Strings.perWeek"
+        case timeline = "LS.Common.Strings.timeline"
+        case goalCompletion = "LS.Common.Strings.goalCompletion"
+        case timeRemaining = "LS.Common.Strings.timeRemaining"
+        case progressOver = "LS.Common.Strings.progressOver"
+        case month = "LS.Common.Strings.month"
+        case date = "LS.Common.Strings.date"
     }
 }
 extension Localizable where Self == LS.Common.Strings {

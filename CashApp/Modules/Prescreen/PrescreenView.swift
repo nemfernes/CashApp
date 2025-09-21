@@ -1,10 +1,15 @@
-
 import UIKit
 
 final class PrescreenView: UIView {
 	
 	// MARK: - Outlets
 	
+    @IBOutlet weak var goalsCollectionView: UICollectionView!
+    @IBOutlet weak var addMoreButton: UIButton!  {
+        didSet {
+            addMoreButton.addTarget(self, action: #selector(addDidTapped), for: .touchUpInside)
+        }
+    }
     @IBOutlet weak var defaultSubtitleLabel: UILabel!  {
         didSet {
             defaultSubtitleLabel.setup(text: LS.Common.Strings.setUr.localized, textColor: .white, font: .urbanistMedium16, textAlignment: .center, adjustWidth: true, numberOfLines: 2)
@@ -29,11 +34,13 @@ final class PrescreenView: UIView {
             setGoalButton.configure(title: LS.Common.Strings.setUrButton.localized, image: .addIcon)
         }
     }
+    
     @IBOutlet weak var defaultImageView: UIImageView! {
         didSet {
             defaultImageView.image = .goal
         }
     }
+    
     @IBOutlet weak var defaultView: UIView!
     @IBOutlet weak var settingsButton: UIButton! {
         didSet {
@@ -41,6 +48,7 @@ final class PrescreenView: UIView {
             settingsButton.addTarget(self, action: #selector(settingDidTapped), for: .touchUpInside)
         }
     }
+    
     @IBOutlet weak var titleLabel: UILabel!  {
         didSet {
             titleLabel.setup(text: LS.Common.Strings.savingsTracker.localized, textColor: .white, font: .urbanistSemiBold20, textAlignment: .center, adjustWidth: true, numberOfLines: 2)
@@ -82,5 +90,9 @@ final class PrescreenView: UIView {
 	
     @objc private func settingDidTapped() {
         settingAction?()
+    }
+    
+    public func reloadCollection() {
+        self.goalsCollectionView.reloadData()
     }
 }
