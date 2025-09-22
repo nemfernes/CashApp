@@ -75,6 +75,13 @@ public extension LS.Common {
         case progressOver = "LS.Common.Strings.progressOver"
         case month = "LS.Common.Strings.month"
         case date = "LS.Common.Strings.date"
+        case notEnoughFunds = "LS.Common.Strings.notEnoughFunds"
+        case savings = "LS.Common.Strings.savings"
+        case edit = "LS.Common.Strings.edit"
+        case delete = "LS.Common.Strings.delete"
+        case Filter = "LS.Common.Strings.Filter"
+        case newest = "LS.Common.Strings.newest"
+        case oldest = "LS.Common.Strings.oldest"
     }
 }
 extension Localizable where Self == LS.Common.Strings {

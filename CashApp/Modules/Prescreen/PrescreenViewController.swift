@@ -13,7 +13,7 @@ final class PrescreenViewController<Router: PrescreenRouter>: ViewController<Pre
 	// MARK: - Properties
     private var goals: Results<Goal>? {
         didSet {
-            mainView.reloadCollection()
+            mainView.reloadCollection(with: goals?.count ?? 0)
         }
     }
 	// MARK: - Life cycle
@@ -27,13 +27,24 @@ final class PrescreenViewController<Router: PrescreenRouter>: ViewController<Pre
         super.viewWillAppear(animated)
         loadGoals()
     }
-	
+    
+    override func premiumDidChange() {
+        super.premiumDidChange()
+        mainView.updatePremium()
+    }
+
+    
 	// MARK: - Private methods
 
 	private func setupActions() {
         mainView.addAction = { [weak self] in
             guard let self else { return }
-            self.router.toEditCreate()
+            guard let goals else { return }
+            if goals.count > 2 && !UserDefaults.premium {
+                self.router.toPremium()
+            } else {
+                self.router.toEditCreate()
+            }
         }
         mainView.settingAction = { [weak self] in
             guard let self else { return }
@@ -41,15 +52,15 @@ final class PrescreenViewController<Router: PrescreenRouter>: ViewController<Pre
         }
         mainView.premAction = { [weak self] in
             guard let self else { return }
-          
+            self.router.toPremium()
         }
 	}
     
     private func loadGoals() {
         goals = DatabaseManager.shared
             .getAll(Goal.self)
-        
     }
+    
     
     func setupGoalsCollectionView() {
         guard let flowLayout = mainView.goalsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
@@ -98,7 +109,7 @@ final class PrescreenViewController<Router: PrescreenRouter>: ViewController<Pre
         
         let availableWidth = collectionView.bounds.width - totalSpacing
         let cellWidth = availableWidth / 2
-        let cellHeight = cellWidth * 1.2
+        let cellHeight = cellWidth * 1.35
         
         return CGSize(width: cellWidth, height: cellHeight)
     }

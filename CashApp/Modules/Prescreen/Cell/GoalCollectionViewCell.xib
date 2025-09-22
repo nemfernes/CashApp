@@ -51,9 +51,19 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-E5-1Ag" customClass="CircleProgressView" customModule="CashApp" customModuleProvider="target">
-                                <rect key="frame" x="82" y="74.666666666666686" width="138" height="138"/>
+                                <rect key="frame" x="77" y="74.666666666666686" width="148" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVk-wd-bRN">
+                                        <rect key="frame" x="54" y="68" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="fVk-wd-bRN" firstAttribute="centerY" secondItem="1RI-E5-1Ag" secondAttribute="centerY" id="GQu-GJ-fcL"/>
+                                    <constraint firstItem="fVk-wd-bRN" firstAttribute="centerX" secondItem="1RI-E5-1Ag" secondAttribute="centerX" id="Pex-ax-DWP"/>
                                     <constraint firstAttribute="width" secondItem="1RI-E5-1Ag" secondAttribute="height" multiplier="1:1" id="bou-U8-JiM"/>
                                 </constraints>
                             </view>
@@ -65,7 +75,7 @@
                             <constraint firstItem="1RI-E5-1Ag" firstAttribute="centerX" secondItem="oRj-cb-KmD" secondAttribute="centerX" id="Fzb-jC-oGz"/>
                             <constraint firstAttribute="bottom" secondItem="s7s-YL-VOb" secondAttribute="bottom" constant="20" id="JYZ-RC-gx1"/>
                             <constraint firstAttribute="trailing" secondItem="kV2-Nw-dgh" secondAttribute="trailing" constant="16" id="Ohz-E5-VO0"/>
-                            <constraint firstItem="s7s-YL-VOb" firstAttribute="top" secondItem="1RI-E5-1Ag" secondAttribute="bottom" constant="10" id="PHh-39-tF1"/>
+                            <constraint firstItem="s7s-YL-VOb" firstAttribute="top" secondItem="1RI-E5-1Ag" secondAttribute="bottom" id="PHh-39-tF1"/>
                             <constraint firstItem="kV2-Nw-dgh" firstAttribute="leading" secondItem="oRj-cb-KmD" secondAttribute="leading" constant="16" id="Sem-8N-nnE"/>
                             <constraint firstItem="pFy-f5-UEa" firstAttribute="leading" secondItem="oRj-cb-KmD" secondAttribute="leading" constant="16" id="Zxl-qZ-ekq"/>
                             <constraint firstAttribute="trailing" secondItem="pFy-f5-UEa" secondAttribute="trailing" constant="16" id="g3S-qN-6dE"/>
@@ -87,6 +97,7 @@
             <connections>
                 <outlet property="bannerView" destination="1RI-E5-1Ag" id="Bzv-9y-whu"/>
                 <outlet property="containerView" destination="oRj-cb-KmD" id="5K9-uY-nNy"/>
+                <outlet property="emojiLabel" destination="fVk-wd-bRN" id="VzO-v0-vNf"/>
                 <outlet property="remainedCounterLabel" destination="WaH-y7-Dxe" id="vwa-Tp-DE0"/>
                 <outlet property="savedCounterLabel" destination="Wjo-fa-yon" id="z18-Jy-Z38"/>
                 <outlet property="titleLabel" destination="kV2-Nw-dgh" id="LzH-He-HtE"/>

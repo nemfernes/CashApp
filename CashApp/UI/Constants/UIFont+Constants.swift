@@ -64,6 +64,7 @@ public extension UIFont {
     static var urbanistMedium18: UIFont! { .getFont(size: 18, family: .urbanist, style: .medium) }
     static var urbanistMedium16: UIFont! { .getFont(size: 16, family: .urbanist, style: .medium) }
     static var urbanistMedium14: UIFont! { .getFont(size: 14, family: .urbanist, style: .medium) }
+    static var urbanistMedium12: UIFont! { .getFont(size: 12, family: .urbanist, style: .medium) }
     
     // MARK: - Urbanist Regular
     static var urbanistRegular20: UIFont! { .getFont(size: 20, family: .urbanist, style: .regular) }

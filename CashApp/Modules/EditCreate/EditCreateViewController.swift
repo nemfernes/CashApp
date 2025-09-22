@@ -15,8 +15,9 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
     private var isNew: Bool
     private var emojis = ["🚗","🏖️","🎉","💻","💍"]
     // MARK: - Life cycle
+    private var closeCompletion: (() -> Void)?
     
-    init(goal: Goal?) {
+    init(goal: Goal?, closeCompletion: (() -> Void)?) {
         if let goal {
             self.isNew = false
             self.currentGoal = goal
@@ -24,6 +25,7 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
             self.isNew = true
             self.currentGoal = Goal()
         }
+        self.closeCompletion = closeCompletion
         super.init()
     }
     
@@ -36,7 +38,34 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
     
     // MARK: - Private methods
     private func setupView() {
-        
+        if !isNew {
+            mainView.titleLabel.text = LS.Common.Strings.edit.localized
+            mainView.fill(with: currentGoal)
+            selectedEmoji = currentGoal.emoji
+            if let index = emojis.firstIndex(of: currentGoal.emoji) {
+                let indexPath = IndexPath(item: index, section: 0)
+                DispatchQueue.main.async {
+                    self.mainView.emojiCollectionView.selectItem(
+                        at: indexPath,
+                        animated: false,
+                        scrollPosition: []
+                    )
+                }
+            } else {
+                emojis.insert(currentGoal.emoji, at: 0)
+                let indexPath = IndexPath(item: 0, section: 0)
+                DispatchQueue.main.async {
+                    self.mainView.emojiCollectionView.reloadData()
+                    self.mainView.emojiCollectionView.selectItem(
+                        at: indexPath,
+                        animated: false,
+                        scrollPosition: []
+                    )
+                }
+            }
+        } else {
+            mainView.titleLabel.text = LS.Common.Strings.newGoal.localized
+        }
     }
     
     private func setupActions() {
@@ -119,7 +148,8 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
             currentGoal.currency = currency
             currentGoal.date = date
             currentGoal.emoji = self.selectedEmoji ?? ""
-            
+            let randomColor = UIColor.randomGoalColor()
+            currentGoal.colorHex = randomColor.toHexString()
             DatabaseManager.shared.add(currentGoal)
         } else {
             DatabaseManager.shared.update(currentGoal) {
@@ -133,6 +163,7 @@ final class EditCreateViewController<Router: EditCreateRouter>: ViewController<E
         
         print(DatabaseManager.shared
             .getAll(Goal.self))
+        self.closeCompletion?()
         router.close()
     }
     

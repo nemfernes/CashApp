@@ -63,3 +63,10 @@
 "LS.Common.Strings.progressOver" = "Progress Over Time";
 "LS.Common.Strings.month" = "months";
 "LS.Common.Strings.date" = "Date";
+"LS.Common.Strings.notEnoughFunds" = "Not enough funds";
+"LS.Common.Strings.savings" = "Savings";
+"LS.Common.Strings.edit" = "Edit";
+"LS.Common.Strings.delete" = "Delete";
+"LS.Common.Strings.Filter" = "Filter";
+"LS.Common.Strings.newest" = "Newest First";
+"LS.Common.Strings.oldest" = "Oldest First";

@@ -50,6 +50,19 @@
 		0A67ECA32E8076980047E03B /* AddTransactionRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67EC9C2E8076980047E03B /* AddTransactionRoute.swift */; };
 		0A67ECA42E8076980047E03B /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67EC9E2E8076980047E03B /* AddTransactionView.swift */; };
 		0A67ECA52E8076980047E03B /* AddTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67ECA02E8076980047E03B /* AddTransactionViewController.xib */; };
+		0A67ECAB2E814DF90047E03B /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECA82E814DF90047E03B /* TransactionTableViewCell.swift */; };
+		0A67ECAC2E814DF90047E03B /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67ECA92E814DF90047E03B /* TransactionTableViewCell.xib */; };
+		0A67ECAE2E8158680047E03B /* OptionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECAD2E8158680047E03B /* OptionMenu.swift */; };
+		0A67ECB52E819C930047E03B /* FilterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECB02E819C930047E03B /* FilterRoute.swift */; };
+		0A67ECB62E819C930047E03B /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECB32E819C930047E03B /* FilterViewController.swift */; };
+		0A67ECB72E819C930047E03B /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECB12E819C930047E03B /* FilterRouter.swift */; };
+		0A67ECB82E819C930047E03B /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECB22E819C930047E03B /* FilterView.swift */; };
+		0A67ECBB2E819CA10047E03B /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67ECBA2E819CA10047E03B /* FilterViewController.xib */; };
+		0A67ECC22E81BC880047E03B /* PremiumContainerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECBD2E81BC880047E03B /* PremiumContainerRouter.swift */; };
+		0A67ECC32E81BC880047E03B /* PremiumContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECBE2E81BC880047E03B /* PremiumContainerView.swift */; };
+		0A67ECC42E81BC880047E03B /* PremiumContainerRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECBC2E81BC880047E03B /* PremiumContainerRoute.swift */; };
+		0A67ECC52E81BC880047E03B /* PremiumContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67ECBF2E81BC880047E03B /* PremiumContainerViewController.swift */; };
+		0A67ECC62E81BC880047E03B /* PremiumContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A67ECC02E81BC880047E03B /* PremiumContainerViewController.xib */; };
 		0AC341732E74C037004AD933 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC341722E74C037004AD933 /* Lottie */; };
 		0AC341762E74C04D004AD933 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC341752E74C04D004AD933 /* Adapty */; };
 		0AC341792E74C05D004AD933 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC341782E74C05D004AD933 /* SwiftyStoreKit */; };
@@ -244,6 +257,19 @@
 		0A67EC9E2E8076980047E03B /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 		0A67EC9F2E8076980047E03B /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		0A67ECA02E8076980047E03B /* AddTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTransactionViewController.xib; sourceTree = "<group>"; };
+		0A67ECA82E814DF90047E03B /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		0A67ECA92E814DF90047E03B /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		0A67ECAD2E8158680047E03B /* OptionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMenu.swift; sourceTree = "<group>"; };
+		0A67ECB02E819C930047E03B /* FilterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRoute.swift; sourceTree = "<group>"; };
+		0A67ECB12E819C930047E03B /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
+		0A67ECB22E819C930047E03B /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		0A67ECB32E819C930047E03B /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		0A67ECBA2E819CA10047E03B /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		0A67ECBC2E81BC880047E03B /* PremiumContainerRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumContainerRoute.swift; sourceTree = "<group>"; };
+		0A67ECBD2E81BC880047E03B /* PremiumContainerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumContainerRouter.swift; sourceTree = "<group>"; };
+		0A67ECBE2E81BC880047E03B /* PremiumContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumContainerView.swift; sourceTree = "<group>"; };
+		0A67ECBF2E81BC880047E03B /* PremiumContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumContainerViewController.swift; sourceTree = "<group>"; };
+		0A67ECC02E81BC880047E03B /* PremiumContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PremiumContainerViewController.xib; sourceTree = "<group>"; };
 		0AC3417E2E74C18F004AD933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACB1E642E7C7F76002A4FCF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0ACB1E672E7C7FAE002A4FCF /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -499,6 +525,7 @@
 		0A506E582E7EC35D005111BB /* DetailGoal */ = {
 			isa = PBXGroup;
 			children = (
+				0A67ECAA2E814DF90047E03B /* Cell */,
 				0A506E592E7EC3B3005111BB /* DetailGoalRoute.swift */,
 				0A506E5A2E7EC3B3005111BB /* DetailGoalRouter.swift */,
 				0A506E5B2E7EC3B3005111BB /* DetailGoalView.swift */,
@@ -518,6 +545,39 @@
 				0A67ECA02E8076980047E03B /* AddTransactionViewController.xib */,
 			);
 			path = AddTransaction;
+			sourceTree = "<group>";
+		};
+		0A67ECAA2E814DF90047E03B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0A67ECA82E814DF90047E03B /* TransactionTableViewCell.swift */,
+				0A67ECA92E814DF90047E03B /* TransactionTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0A67ECAF2E819C830047E03B /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				0A67ECB02E819C930047E03B /* FilterRoute.swift */,
+				0A67ECB12E819C930047E03B /* FilterRouter.swift */,
+				0A67ECB22E819C930047E03B /* FilterView.swift */,
+				0A67ECB32E819C930047E03B /* FilterViewController.swift */,
+				0A67ECBA2E819CA10047E03B /* FilterViewController.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		0A67ECC12E81BC880047E03B /* PremiumContainer */ = {
+			isa = PBXGroup;
+			children = (
+				0A67ECBC2E81BC880047E03B /* PremiumContainerRoute.swift */,
+				0A67ECBD2E81BC880047E03B /* PremiumContainerRouter.swift */,
+				0A67ECBE2E81BC880047E03B /* PremiumContainerView.swift */,
+				0A67ECBF2E81BC880047E03B /* PremiumContainerViewController.swift */,
+				0A67ECC02E81BC880047E03B /* PremiumContainerViewController.xib */,
+			);
+			path = PremiumContainer;
 			sourceTree = "<group>";
 		};
 		0AC341AE2E760C4B004AD933 /* Font */ = {
@@ -871,6 +931,7 @@
 				0AE0D3972E7AE73D00623631 /* CenterTextButton.swift */,
 				0A506E512E7DB3BB005111BB /* CircleProgressView.swift */,
 				0A506E532E7EC236005111BB /* SegmentedControlView.swift */,
+				0A67ECAD2E8158680047E03B /* OptionMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -902,6 +963,7 @@
 		494680B82E3794DD0054FFB5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0A67ECAF2E819C830047E03B /* Filter */,
 				0A67EC9B2E8076790047E03B /* AddTransaction */,
 				0A506E582E7EC35D005111BB /* DetailGoal */,
 				0ACB1E792E7C8D4A002A4FCF /* SelectDate */,
@@ -964,6 +1026,7 @@
 		494681432E38C6780054FFB5 /* Premiums */ = {
 			isa = PBXGroup;
 			children = (
+				0A67ECC12E81BC880047E03B /* PremiumContainer */,
 				494681552E38CD0C0054FFB5 /* CommonPremium */,
 			);
 			path = Premiums;
@@ -1100,6 +1163,7 @@
 				0ACB1E732E7C823D002A4FCF /* SelectCurrencyViewController.xib in Resources */,
 				0A4F1AC62E78AA75007CD304 /* README.txt in Resources */,
 				0AE0D3C72E7B435F00623631 /* TypeEmojiCollectionViewCell.xib in Resources */,
+				0A67ECBB2E819CA10047E03B /* FilterViewController.xib in Resources */,
 				0A4F1AC72E78AA75007CD304 /* Urbanist-BoldItalic.ttf in Resources */,
 				0A4F1AC82E78AA75007CD304 /* OFL.txt in Resources */,
 				0AE0D3862E7A113500623631 /* SubConfig.storekit in Resources */,
@@ -1125,6 +1189,7 @@
 				0A4F1AD62E78AA75007CD304 /* Urbanist-SemiBoldItalic.ttf in Resources */,
 				0AE0D3B72E7B27C700623631 /* SelectEmojiViewController.xib in Resources */,
 				0A4F1AD72E78AA75007CD304 /* Urbanist-Medium.ttf in Resources */,
+				0A67ECC62E81BC880047E03B /* PremiumContainerViewController.xib in Resources */,
 				0A4F1AD82E78AA75007CD304 /* Urbanist-ExtraLightItalic.ttf in Resources */,
 				0A4F1AD92E78AA75007CD304 /* Urbanist-SemiBold.ttf in Resources */,
 				0A4F1ADA2E78AA75007CD304 /* Urbanist-ThinItalic.ttf in Resources */,
@@ -1135,6 +1200,7 @@
 				4946815B2E38CD1A0054FFB5 /* CommonPremiumViewController.xib in Resources */,
 				494680612E3753500054FFB5 /* Common.strings in Resources */,
 				49467FCD2E3752C90054FFB5 /* Assets.xcassets in Resources */,
+				0A67ECAC2E814DF90047E03B /* TransactionTableViewCell.xib in Resources */,
 				0A4F1A802E7894D9007CD304 /* InteractiveWelcomeView.xib in Resources */,
 				49467FCF2E3752C90054FFB5 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -1148,6 +1214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE0D3A72E7B1E6200623631 /* CategoryCollectionViewCell.swift in Sources */,
+				0A67ECAB2E814DF90047E03B /* TransactionTableViewCell.swift in Sources */,
 				49467FD12E3752C90054FFB5 /* AppDelegate.swift in Sources */,
 				494680DF2E3796EC0054FFB5 /* RootRouter.swift in Sources */,
 				494680632E3753500054FFB5 /* NSObject+ClassName.swift in Sources */,
@@ -1170,6 +1237,7 @@
 				494680722E3753500054FFB5 /* ClosureAction.swift in Sources */,
 				494680732E3753500054FFB5 /* ShareRoute.swift in Sources */,
 				494680742E3753500054FFB5 /* Common.swift in Sources */,
+				0A67ECAE2E8158680047E03B /* OptionMenu.swift in Sources */,
 				494680752E3753500054FFB5 /* UIImage+Init.swift in Sources */,
 				494680762E3753500054FFB5 /* NibRepresentable.swift in Sources */,
 				0AE0D3B32E7B27C700623631 /* SelectEmojiRouter.swift in Sources */,
@@ -1180,6 +1248,10 @@
 				494680772E3753500054FFB5 /* BottomAnimator.swift in Sources */,
 				494680782E3753500054FFB5 /* Then.swift in Sources */,
 				494680792E3753500054FFB5 /* UITableView+Register.swift in Sources */,
+				0A67ECC22E81BC880047E03B /* PremiumContainerRouter.swift in Sources */,
+				0A67ECC32E81BC880047E03B /* PremiumContainerView.swift in Sources */,
+				0A67ECC42E81BC880047E03B /* PremiumContainerRoute.swift in Sources */,
+				0A67ECC52E81BC880047E03B /* PremiumContainerViewController.swift in Sources */,
 				4946807A2E3753500054FFB5 /* ViewController.swift in Sources */,
 				4946807B2E3753500054FFB5 /* AnimationView.swift in Sources */,
 				4946807C2E3753500054FFB5 /* ChildTransion.swift in Sources */,
@@ -1248,6 +1320,10 @@
 				494680982E3753500054FFB5 /* Kindable.swift in Sources */,
 				0AE0D3C32E7B42D600623631 /* EmojiCollectionViewCell.swift in Sources */,
 				494680992E3753500054FFB5 /* UINavigationController.swift in Sources */,
+				0A67ECB52E819C930047E03B /* FilterRoute.swift in Sources */,
+				0A67ECB62E819C930047E03B /* FilterViewController.swift in Sources */,
+				0A67ECB72E819C930047E03B /* FilterRouter.swift in Sources */,
+				0A67ECB82E819C930047E03B /* FilterView.swift in Sources */,
 				4946809B2E3753500054FFB5 /* Vibration.swift in Sources */,
 				0A506E522E7DB3BB005111BB /* CircleProgressView.swift in Sources */,
 				494681492E38CCB20054FFB5 /* CustomPremiumRoute.swift in Sources */,

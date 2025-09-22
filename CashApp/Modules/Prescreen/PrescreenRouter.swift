@@ -10,11 +10,15 @@ import UIKit
 public class PrescreenRouter: Router {
     
     func toEditCreate() {
-        openEditCreate(transition: ModalTransition(fromViewController: viewController, transitionStyle: .crossDissolve, presentationStyle: .fullScreen), router: EditCreateRouter.self)
+        openEditCreate(transition: ModalTransition(fromViewController: viewController, transitionStyle: .crossDissolve, presentationStyle: .fullScreen), router: EditCreateRouter.self, closeCompletion: {})
     }
     
     func toDetail(goal: Goal) {
         openDetailGoal(transition: ModalTransition(fromViewController: viewController, transitionStyle: .crossDissolve, presentationStyle: .fullScreen), router: DetailGoalRouter.self, goal: goal)
+    }
+    
+    func toPremium() {
+        openPremiumContainer(closeCompletion: nil, adaptyPlacement: .main, transition: ModalTransition(fromViewController: viewController, transitionStyle: .crossDissolve, presentationStyle: .fullScreen), router: PremiumContainerRouter.self)
     }
 }
 
@@ -22,3 +26,4 @@ public class PrescreenRouter: Router {
 
 extension PrescreenRouter: EditCreateRoute { }
 extension PrescreenRouter: DetailGoalRoute {}
+extension PrescreenRouter: PremiumContainerRoute { }

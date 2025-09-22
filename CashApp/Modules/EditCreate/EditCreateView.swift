@@ -172,6 +172,33 @@ final class EditCreateView: UIView, UITextFieldDelegate {
         updateBorder(for: dateContainerView, isActive: true)
     }
     
+    func fill(with goal: Goal) {
+           
+            nameTextField.text = goal.name
+            updateBorder(for: nameTextField, isActive: !goal.name.isEmpty)
+            
+            // Сумма
+            if goal.amount > 0 {
+                amountTextField.text = "\(goal.amount)"
+                updateBorder(for: amountTextField, isActive: true)
+            }
+            
+            // Валюта
+            if !goal.currency.isEmpty {
+                currencyValueLabel.text = goal.currency
+                currencyValueLabel.textColor = .white
+                updateBorder(for: currencyContainerView, isActive: true)
+            }
+            
+            // Дата
+            if !goal.date.isEmpty {
+                dateValueLabel.text = goal.date
+                dateValueLabel.textColor = .white
+                updateBorder(for: dateContainerView, isActive: true)
+            }
+            
+        }
+    
      func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == nameTextField {
             updateBorder(for: nameTextField, isActive: !(textField.text?.isEmpty ?? true))

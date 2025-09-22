@@ -5,11 +5,32 @@ class GoalCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var emojiLabel: UILabel! {
+        didSet {
+            emojiLabel.font = .systemFont(ofSize: 40)
+        }
+    }
     @IBOutlet weak var bannerView: CircleProgressView!
-    @IBOutlet weak var remainedCounterLabel: UILabel!
-    @IBOutlet weak var savedCounterLabel: UILabel!
-    @IBOutlet weak var totalPriceLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var remainedCounterLabel: UILabel!  {
+        didSet {
+            remainedCounterLabel.setup(text: LS.Common.Strings.december.localized, textColor: .color99989B, font: .urbanistMedium12, textAlignment: .center, adjustWidth: true, numberOfLines: 1)
+        }
+    }
+    @IBOutlet weak var savedCounterLabel: UILabel!  {
+        didSet {
+            savedCounterLabel.setup(text: LS.Common.Strings.december.localized, textColor: .color99989B, font: .urbanistMedium12, textAlignment: .center, adjustWidth: true, numberOfLines: 1)
+        }
+    }
+    @IBOutlet weak var totalPriceLabel: UILabel!   {
+        didSet {
+            totalPriceLabel.setup(text: LS.Common.Strings.december.localized, textColor: .color99989B, font: .urbanistMedium14, textAlignment: .center, adjustWidth: true, numberOfLines: 1)
+        }
+    }
+    @IBOutlet weak var titleLabel: UILabel!  {
+        didSet {
+            titleLabel.setup(text: "", textColor: .white, font: .urbanistMedium20, textAlignment: .center, adjustWidth: true, numberOfLines: 1)
+        }
+    }
     static let reuseId = "GoalCollectionViewCell"
 
     
@@ -28,18 +49,11 @@ class GoalCollectionViewCell: UICollectionViewCell {
     func setup(data: Goal) {
         titleLabel.text = data.name
         totalPriceLabel.text = "$\(data.amount)"
-        
-        let saved = 100
-        let total = 150
-        let remained = max(total - saved, 0)
-        
-        savedCounterLabel.text = "$\(Int(saved))"
-        remainedCounterLabel.text = "$\(Int(remained))"
-        
-        bannerView.progress = 0.3
-        if total > 0 {
-                bannerView.progress = CGFloat(saved) / CGFloat(total)
-            }
+        remainedCounterLabel.text =  "$\(data.remaining)"
+        savedCounterLabel.text =  "$\(data.accumulated)"
+        bannerView.progress = data.progress
+        bannerView.progressColor = data.uiColor
+        emojiLabel.text = data.emoji
     }
 
     

@@ -92,7 +92,14 @@ final class PrescreenView: UIView {
         settingAction?()
     }
     
-    public func reloadCollection() {
-        self.goalsCollectionView.reloadData()
+    public func reloadCollection(with goalsCount: Int) {
+        goalsCollectionView.reloadData()
+        defaultView.isHidden = goalsCount > 0
+        addMoreButton.isHidden = goalsCount == 0
+        goalsCollectionView.isHidden = goalsCount == 0
+    }
+    
+    public func updatePremium() {
+        premButton.isHidden = UserDefaults.premium
     }
 }

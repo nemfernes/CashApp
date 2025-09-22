@@ -19,11 +19,13 @@ final class AddTransactionViewController<Router: AddTransactionRouter>: ViewCont
      var transactionCompletion: (() -> Void)?
      let transactionType: TransactionType
      let goal: Goal
+     private var editingTransaction: Transaction?
     
-    init(transactionCompletion: (() -> Void)?, transactionType: TransactionType, goal: Goal) {
+    init(transactionCompletion: (() -> Void)?, transactionType: TransactionType, goal: Goal, editingTransaction: Transaction? = nil) {
         self.transactionCompletion = transactionCompletion
         self.transactionType = transactionType
         self.goal = goal
+        self.editingTransaction = editingTransaction
         super.init()
     }
 	// MARK: - Life cycle
@@ -36,6 +38,13 @@ final class AddTransactionViewController<Router: AddTransactionRouter>: ViewCont
 	// MARK: - Private methods
 	private func setupView() {
         mainView.setupUI(type: transactionType)
+        if let transaction = editingTransaction {
+                   mainView.amountTextField.text = "\(transaction.amount)"
+                   
+                   let formatter = DateFormatter()
+                   formatter.dateFormat = "MMM dd, yyyy"
+                   mainView.dateValueLabel.text = formatter.string(from: transaction.date)
+               }
 	}
 
 	private func setupActions() {
@@ -71,20 +80,37 @@ final class AddTransactionViewController<Router: AddTransactionRouter>: ViewCont
               )
               return
           }
+        
+        if transactionType == .withdraw, amount > goal.accumulated {
+                router.openWarningAlert(
+                    title: LS.Common.Strings.warning.localized,
+                    text: LS.Common.Strings.notEnoughFunds.localized 
+                )
+                return
+            }
     
         let formatter = DateFormatter()
-            formatter.dateFormat = "MMM dd, yyyy"
-            let parsedDate = formatter.date(from: dateText) ?? Date()
+        formatter.locale = Locale.current
+        formatter.dateFormat = "dd MMMM yyyy"
+        let parsedDate = formatter.date(from: dateText) ?? Date()
            
-            let transaction = Transaction()
-            transaction.amount = amount
-            transaction.date = parsedDate
-            transaction.type = transactionType
-            transaction.goal = goal
-            
-            DatabaseManager.shared.update(goal) {
-                goal.transactions.append(transaction)
-            }
+        if let transaction = editingTransaction {
+                    DatabaseManager.shared.update(transaction) {
+                        transaction.amount = amount
+                        transaction.date = parsedDate
+                        transaction.type = self.transactionType
+                    }
+                } else {
+                    let transaction = Transaction()
+                    transaction.amount = amount
+                    transaction.date = parsedDate
+                    transaction.type = transactionType
+                    transaction.goal = goal
+                    
+                    DatabaseManager.shared.update(goal) {
+                        goal.transactions.append(transaction)
+                    }
+                }
             
         
         print(DatabaseManager.shared

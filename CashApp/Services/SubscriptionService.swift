@@ -296,6 +296,7 @@ public class SubscriptionService: NSObject {
 				AdaptyService.shared.buyProduct(placement: placement, id: product.rawValue, completion: { result in
 					switch result {
 					case .success:
+                        UserDefaults.premium = true
 						AdaptyService.shared.setProfileValue(value: placement.key, key: "purchasePlace")
 						completion(result)
 					case .error(let error):
